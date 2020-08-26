@@ -28,4 +28,12 @@ export function task8Old() {
 // Напишите реализацию функции task8Old на ES6+ ниже этого комментария.
 // При желании, можете использовать стрелочную функцию, вместо обычной
 
-export function task8New() {}
+export const task8New = () => {
+  const obj = {
+    nums: [0, 2, 5, 10, 15],
+    calculateNumsFive() {
+      return this.nums.filter(index => index % 5 === 0);
+    },
+  };
+  return obj.calculateNumsFive();
+};
