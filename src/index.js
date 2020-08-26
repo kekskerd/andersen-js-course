@@ -15,6 +15,14 @@
  *
  * Для задач на array-practice импортируйте написанные функции сюда и проверяйте их работу тут.
  */
+import { any } from './array-practice/task1';
+import { arrayDiff } from './array-practice/task2';
+import { forEachRight } from './array-practice/task3';
+import { union } from './array-practice/task4';
+import { createGenerator } from './array-practice/task5';
+import { transformArrayToNumber } from './array-practice/task6';
+import { take } from './array-practice/task7';
+import { without } from './array-practice/task8';
 
 import { task1Old, task1New } from './es-features/task1';
 import { task2Old, task2New } from './es-features/task2';
@@ -31,7 +39,59 @@ import { task10Old, task10New } from './es-features/task10';
 // import { task13Old, task13New } from './es-features/task13';
 // import { task14Old, task14New } from './es-features/task14';
 // import { task15Old, task15New } from './es-features/task15';
+console.log('============ARRAY-PRACTICE============');
+console.log('array task1');
+console.log(any([0, 1, 2, 0], x => x >= 2));
+console.log(any([0, 0, 1, 0]));
+console.log(any([0, 0, 0, 0]));
 
+console.log('=============');
+
+console.log('array task2');
+console.log(arrayDiff([1, 2, 3], [1, 2, 4]));
+console.log(arrayDiff([1, 3, 3, 4], [1, 3, '4']));
+
+console.log('=============');
+
+console.log('array task3');
+console.log(forEachRight([1, 2, 3, 4], val => console.log(val)));
+
+console.log('=============');
+
+console.log('array task4');
+console.log(union([5, 1, 2, 3, 3], [4, 3, 2]));
+console.log(union([5, 1, 3, 3, 4], [1, 3, 4]));
+
+console.log('=============');
+
+console.log('array task5');
+const generator = createGenerator([1, '6', 3, 2]);
+for (let i = 0; i < 6; i++) {
+  console.log(generator.next());
+}
+
+console.log('=============');
+
+console.log('array task6');
+console.log(transformArrayToNumber([10, 20, 30], (acc, item) => acc + item));
+console.log(transformArrayToNumber([10, 20, 30], (acc, item) => acc + item, 10));
+console.log(transformArrayToNumber([10, 20, 30], (acc, item) => acc * item));
+console.log(transformArrayToNumber([10, 20, 30], (acc, item) => acc * item, 1));
+console.log(transformArrayToNumber([10, 20, 30], (acc, item) => acc - item));
+
+console.log('=============');
+
+console.log('array task7');
+console.log(take([1, 2, 3], 5));
+console.log(take([1, 2, 3], 2));
+console.log('=============');
+
+console.log('array task8');
+console.log(without([2, 1, 2, 3], 1, 2));
+console.log(without([2, 1, 10, 20], 1, 2));
+console.log('=============');
+
+console.log('============ES-FEATURES============');
 console.log('task1 old', task1Old(10) === 500); // true
 console.log('task1 new', task1New(10) === 500); // true
 
