@@ -18,3 +18,7 @@
 // ];
 
 // function membersOnActiveMeetups(meetups) {}
+
+export const membersOnActiveMeetups = meetups => {
+  return meetups.reduce((sum, item) => (item.isActive ? sum + item.members : sum), 0);
+};
