@@ -7,7 +7,8 @@ import './styles/main.css';
 // import { parallelResponses, sequenceResponses, urls } from './asynchronous-programming/task5';
 // import { getResolvedPromise } from './asynchronous-programming/task6';
 // import { getResolvedPromise } from './asynchronous-programming/task6';
-import { fooAsync } from './asynchronous-programming/task7';
+// import { fooAsync } from './asynchronous-programming/task7';
+import { fooAsyncTask8 } from './asynchronous-programming/task8';
 
 // console.log('======TASK 1=====');
 // foo(5, createCb('cb'));
@@ -38,5 +39,8 @@ import { fooAsync } from './asynchronous-programming/task7';
 //   .catch(er => console.log(er))
 //   .finally(() => console.log('This is finally!'));
 
-console.log('======TASK 7=====');
-fooAsync();
+// console.log('======TASK 7=====');
+// fooAsync();
+
+console.log('======TASK 8=====');
+fooAsyncTask8('https://jsonplaceholder.typicode.com/users');
