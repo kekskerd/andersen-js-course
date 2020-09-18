@@ -14,12 +14,17 @@ export const parallelResponses = arr => {
 };
 
 export const sequenceResponses = arr => {
-  arr.reduce(
-    (prom, url) =>
-      prom
-        .then(() => fetch(url))
-        .then(response => response.json())
-        .then(value => console.log('=======TASK 5 SEQ=======', value)),
-    Promise.resolve()
-  );
+  arr
+    .reduce(
+      (prom, url) =>
+        prom.then(values =>
+          fetch(url)
+            .then(response => response.json())
+            .then(data => [...values, data])
+        ),
+      Promise.resolve([])
+    )
+    .then(data => {
+      console.log('=======TASK 5 SEQ=======', data);
+    });
 };

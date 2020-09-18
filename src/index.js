@@ -38,7 +38,7 @@ import { Musician } from './asynchronous-programming/task10';
         throw new Error('Ошибка');
       }
     })
-    .catch(er => console.log(er))
+    .catch(er => console.log(er.message))
     .finally(() => console.log('This is finally!'));
 
   console.log('======TASK 7=====');
