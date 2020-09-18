@@ -8,7 +8,8 @@ import './styles/main.css';
 // import { getResolvedPromise } from './asynchronous-programming/task6';
 // import { getResolvedPromise } from './asynchronous-programming/task6';
 // import { fooAsync } from './asynchronous-programming/task7';
-import { fooAsyncTask8 } from './asynchronous-programming/task8';
+// import { fooAsyncTask8 } from './asynchronous-programming/task8';
+import { fooAsyncTask9 } from './asynchronous-programming/task9';
 
 // console.log('======TASK 1=====');
 // foo(5, createCb('cb'));
@@ -42,5 +43,8 @@ import { fooAsyncTask8 } from './asynchronous-programming/task8';
 // console.log('======TASK 7=====');
 // fooAsync();
 
-console.log('======TASK 8=====');
-fooAsyncTask8('https://jsonplaceholder.typicode.com/users');
+// console.log('======TASK 8=====');
+// fooAsyncTask8('https://jsonplaceholder.typicode.com/users');
+
+console.log('======TASK 9=====');
+fooAsyncTask9();
