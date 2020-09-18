@@ -9,7 +9,7 @@ export const urls = [
 
 export const parallelResponses = arr => {
   Promise.all(arr.map(url => fetch(url).then(response => response.json()))).then(values =>
-    console.log(values)
+    console.log('=======TASK 5 PAR=======', values)
   );
 };
 
@@ -19,7 +19,7 @@ export const sequenceResponses = arr => {
       prom
         .then(() => fetch(url))
         .then(response => response.json())
-        .then(value => console.log(value)),
+        .then(value => console.log('=======TASK 5 SEQ=======', value)),
     Promise.resolve()
   );
 };
