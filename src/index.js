@@ -23,12 +23,12 @@ import { Musician } from './asynchronous-programming/task10';
   console.log('======TASK 3=====');
   await delay(1500).then(value => console.log(`Done with ${value}`));
 
-  console.log('======TASK 4=====');
+  //   console.log('======TASK 4=====');
   await doubleFetch();
 
-  console.log('======TASK 5 PARALLEL=====');
+  // ('======TASK 5 PARALLEL=====');
   await parallelResponses(urls);
-  console.log('======TASK 5 SEQUENCE=====');
+  // ('======TASK 5 SEQUENCE=====');
   await sequenceResponses(urls);
 
   console.log('======TASK 6=====');
@@ -52,5 +52,5 @@ import { Musician } from './asynchronous-programming/task10';
 
   console.log('======TASK 10=====');
   const musician = new Musician('https://jsonplaceholder.typicode.com/albums');
-  await musician.getAlbums().then(albums => console.log(albums));
+  musician.getAlbums().then(albums => console.log(albums));
 })();
