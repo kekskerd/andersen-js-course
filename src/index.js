@@ -5,7 +5,9 @@ import './styles/main.css';
 // import { delay } from './asynchronous-programming/task3';
 // import { doubleFetch } from './asynchronous-programming/task4';
 // import { parallelResponses, sequenceResponses, urls } from './asynchronous-programming/task5';
-import { getResolvedPromise } from './asynchronous-programming/task6';
+// import { getResolvedPromise } from './asynchronous-programming/task6';
+// import { getResolvedPromise } from './asynchronous-programming/task6';
+import { fooAsync } from './asynchronous-programming/task7';
 
 // console.log('======TASK 1=====');
 // foo(5, createCb('cb'));
@@ -26,12 +28,15 @@ import { getResolvedPromise } from './asynchronous-programming/task6';
 // console.log('======TASK 5 SEQUENCE=====');
 // sequenceResponses(urls);
 
-console.log('======TASK 6=====');
-getResolvedPromise(500)
-  .then(value => {
-    if (value > 300) {
-      throw new Error('Ошибка');
-    }
-  })
-  .catch(er => console.log(er))
-  .finally(() => console.log('This is finally!'));
+// console.log('======TASK 6=====');
+// getResolvedPromise(500)
+//   .then(value => {
+//     if (value > 300) {
+//       throw new Error('Ошибка');
+//     }
+//   })
+//   .catch(er => console.log(er))
+//   .finally(() => console.log('This is finally!'));
+
+console.log('======TASK 7=====');
+fooAsync();
